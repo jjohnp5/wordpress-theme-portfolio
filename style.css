@@ -1,0 +1,513 @@
+/*!
+Theme Name: Portfolio
+Theme URI: http://underscores.me/
+Author: John Lagmay
+Author URI: http://www.johnlagmay.com
+Description: Portfolio
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: portfolio
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Portfolio is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ 
+
+
+
+/* ==========================================================================
+   Helper classes
+ 
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* LOGGED IN STYLES WODRPRESS */
+.logged-in{
+	margin-top: 32px;
+}
+.page{
+    background: rgb(248, 213, 58);
+}
+#about{
+    background: rgba(255,255,255, .9);
+}
+.resume-container, .contact-container{
+    background: rgba(0,0,0, .8);
+    color: rgb(245, 240, 230);
+}
+.contact-container input, .contact-container textarea{
+    background: rgba(255,255,255,.6);
+}
+.resume-download a{
+    text-decoration: none;
+    color: rgba(255,255,255, .8);
+}
+.resume-download a:hover{
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+}
+.resume-download a:visited{
+    color: rgb(240,230,220);
+    text-decoration: none;
+}
+/*maincontainer*/
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/*Banner*/
+.banner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quote{
+    color: #f8f8f8;
+    text-shadow: 2px 2px 8px rgba(127, 87, 46, 1);
+    padding: 10%;
+    font-size: 3em;
+}
+.quote-text{
+    font-size: 1.3em;
+}
+/*NAV*/
+.navbar-dark{
+    background: rgb(248, 213, 58);
+}
+
+.menu a:hover{
+    color: white;
+    text-decoration: none;
+}
+.menu a.active{
+    background-color: rgba(155, 72, 4, .1);
+    opacity: .75;
+    color: white;
+}
+/*ABOUT*/
+/* .about{
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.resume{
+    font-size: 1.1em;
+    color: #313131;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.summary{
+    color: #302b2b;
+    align-self: flex-start;
+    width: 40%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #F8AA5A;
+    margin-left: 2em;
+}
+.education{
+    align-self: flex-end;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #f8810a;
+    margin-right: 2em;
+}
+.education li{
+    list-style: none;
+    text-align: left;
+}
+.resume-download{
+    margin: 3em;
+    padding-top: 3em;
+    height: 10%;
+}
+.resume-download a{
+    color: #f3e38b;
+    padding: .3em;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: .3em;
+    background-color: #247ff7;
+}
+.resume-download a:hover{
+    border: 2px black outset;
+    background-color: #065bca;
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition-property: display;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+
+.github{
+    color: white;
+    height: 75px;
+    width: auto;
+}
+.github a{
+    text-decoration: none;
+    color: black;
+    text-shadow: 0px 0px 5px rgb(119, 102, 64);
+}
+.github a:hover{
+    text-decoration: none;
+}
+.section-title{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 5px rgb(119, 102, 64);
+    align-self: center;
+    width: 100%;
+}
+.profile-personal{
+    width: 30%;
+    align-self: flex-start;
+    background-color: #e4dede;
+    margin-left: 1em;
+    padding: 1em;
+}
+.profile-education{
+    width: 30%;
+    align-self: center;
+    background-color: #F8AA5A;
+    padding: 1em;    
+}
+.profile-other{
+    width: 30%;
+    align-self: flex-end;
+    background-color: #f8810a;
+    margin-right: 1em;
+    padding: 1em;    
+} */
+
+
+
+
+
+/*PROJECT*/
+
+.project-container{
+    background: url('https://images.unsplash.com/photo-1428999418909-363f8e091c50?auto=format&fit=crop&w=1353&q=80') 50% 0 repeat fixed;     
+    background-size: 100% 1500px;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    position: relative;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    min-height: 80%;
+}
+.project-title{
+    color: white;
+}
+.project > div{
+    margin-top: 15px;
+    width: 100%;
+}
+.project a{
+    text-decoration: none;
+    color: #e0dcdc;
+}
+.project a:visited{
+    color: black;
+}
+.proj{
+    min-height: 50vh;
+    flex-basis: 40%;
+    align-content: stretch;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.proj div{
+    background-color: transparent;
+    min-height: 200px;
+    width: 100%;
+    transition: background-image 300ms ease-in;
+}
+/* .proj a{ */
+    /* width: 20%; */
+    
+    /* font-size: 1.2em;
+    text-decoration: none;
+    padding: .5em;
+    border-radius: .5em;
+    background-color: #f8810a; */
+/* } */
+.proj a:hover{
+    border: .1em inset black;
+    color: #252525;
+    background-color: #e4dede;
+}
+.proj p{
+    max-width: 40%;
+}
+.thumbnails{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+.thumbnails div{
+    height: 75px;
+    min-width: 85px;
+    margin: 5px;
+    padding: none;
+}
+.proj-thumb{
+    -webkit-box-shadow: -2px 3px 53px 1px rgba(244,61,128,1);
+    -moz-box-shadow: -2px 3px 53px 1px rgba(244,61,128,1);
+    box-shadow: -2px 3px 53px 1px rgba(244,61,128,1);
+}
+.proj-thumb:hover{
+    cursor: pointer;
+}
+/* .thumbnails div:nth-child(odd){
+    background-color: black;
+}
+.thumbnails div:nth-child(even){
+    background-color: red; */
+/* } */
+/* TECHNOLOGY SECTION */
+.tech{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 150px;
+}
+
+
+.icons i, .github i {
+    font-size: 3em;
+    text-align: center;
+    transition-property: font-size, color;
+    transition-duration: 75ms;
+    transition-timing-function: ease-in-out;
+}
+.icon{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.icons{
+    text-align: center;
+    display: none;
+
+}
+.icons i:hover, .github i:hover{
+    font-size: 4em;
+    color: #f7d7b8;
+}
+.label{
+    font-size: .8em;
+    display: none;
+
+}
+/*CONTACT*/
+div.wpcf7{
+    margin-top: 50px;
+}
+/*FOOTER*/
+footer{
+    padding: 10px 10px;
+    color: #F8AA5A;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #443C3A;
+    width: 100%;
+}
+footer p{
+    margin: 0;
+}
+.social{
+    display: flex;
+    justify-content: flex-end;
+    color: #402C17;
+    flex-basis: 30%;
+}
+.social a{
+    margin: 5px 5px;
+    color: #F8AA5A;
+    text-decoration: none;
+}
+.social a:hover{
+    color: #7F572E;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    footer{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+}
+
+
+/*RESPONSIVE CSS*/
+
+@media screen and (max-width: 450px){
+    
+    /* nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+    .menu{
+        flex-basis: 1;
+        flex-direction: column;
+        font-size: 1.5em;
+        display: none;
+        animation-duration: 300ms;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+    }
+    .menu-bar{
+        visibility: visible;
+    } */
+    .quote{
+        font-size: 1.5em;
+    }
+    section{
+        padding: 0;
+    }
+    
+    .proj div{
+        min-height: 75px;
+    }
+    .proj p{
+        font-size: .8em;
+    }
+    .tech{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .icon{
+        padding: 1em;
+        font-size: .7em;
+        width: 80%;
+        flex-wrap: wrap;
+    }
+
+}
+@media screen and (max-width: 720px){
+
+    
+    .resume-download{
+        font-size: .8em;
+    }
+}
+@media screen and (max-width: 900px){
+    .project{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .project div{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 1366px){
+    
+}
+@media screen and (max-height: 900px){
+    section{
+        height: auto;
+    }
+}
+
+/*ANIMATION KEYFRAMES*/
+@keyframes height{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 175px;
+    }
+}
+@keyframes done{
+    0%{
+        height: 175px;
+    }
+    100%{
+        height: 0;
+    }
+
+}
+
+
+
+
+
+
+
+

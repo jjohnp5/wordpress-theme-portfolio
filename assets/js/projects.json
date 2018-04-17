@@ -1,0 +1,48 @@
+{
+    "project": [ {
+        "id" : "1",
+        "name": "zClient",
+        "img": "wp-content/themes/portfolio/assets/img/patatap.PNG",
+        "link": "/zclient",
+        "desc": "PHP/mySQL client management app. It lets users add or remove new and old clients to their managed clients. <br>For Test - User: <strong>test@test.com</strong> PW: <strong>test</strong>",
+        "technologies": [
+            "devicon-javascript-plain",
+            "devicon-html5-plain",
+            "devicon-php-plain",
+            "devicon-mysql-plain",
+            "devicon-bootstrap-plain"
+        ]
+    },
+    {
+        "id" : "2",
+        "name": "RIOT API",
+        "img": "wp-content/themes/portfolio/assets/img/league.png",
+        "link": "https://github.com/jjohnp5/riot",
+        "desc": "Full stack project utilizing RIOT's API to gather in-game and match history data",
+        "technologies": [
+            "devicon-html5-plain",
+            "devicon-css3-plain",
+            "devicon-javascript-plain",
+            "devicon-jquery-plain",
+            "devicon-nodejs-plain",
+            "devicon-express-original"
+
+        ]
+    },
+    {
+        "id" : "3",
+        "name": "Portfolio Github",
+        "img": "wp-content/themes/portfolio/assets/img/portfolio.PNG",
+        "link": "https://github.com/jjohnp5/portfolio",
+        "desc": "Full front end code for portfolio site. Utilized ajax to create dynamic data of projects.",
+        "technologies":[
+            "devicon-html5-plain",
+            "devicon-css3-plain",
+            "devicon-jquery-plain",
+            "devicon-javascript-plain"
+
+        ]
+
+    }
+    ]
+}
