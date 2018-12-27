@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
     <!-- CSS CUSTOM -->
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,14 +37,13 @@
 
 <body <?php body_class(); ?> >
 <div id="wptime-plugin-preloader"></div>
+
+	<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'portfolio' ); ?></a> -->
+
+	<!-- <header class="site-header" role="banner"> -->
 <div class="container-fluid">
-
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'portfolio' ); ?></a>
-
-	<header class="site-header" role="banner">
-
-<div class="navbar fixed-top navbar-dark navbar-expand-lg container-fluid" role="navigation">
-  <a class="navbar-brand" href="/">John Lagmay</a>
+<div class="navbar fixed-top navbar-dark navbar-expand-lg" role="navigation">
+  <a class="navbar-brand" href="/"><img src="<?php bloginfo('stylesheet_directory')?>/assets/img/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -68,6 +67,7 @@
     </div>
 			
     </div>
+
 	<!-- navbar-wrapper -->
 
-</header>
+<!-- </header> -->

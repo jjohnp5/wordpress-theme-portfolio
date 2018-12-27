@@ -40,9 +40,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .browserupgrade {
     margin: 0.2em 0;
-    background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+html{
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -52,19 +54,44 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .logged-in{
 	margin-top: 32px;
 }
-.page{
+section{
+    padding: 25px 0;
+    text-align: center;
+}
+/* .page{
     background: rgb(248, 213, 58);
+} */
+.navbar-nav{
+    align-self: flex-end;
+}
+.navbar-brand img{
+    max-height: 40px;
+    width: 70px;
 }
 #about{
-    background: rgba(255,255,255, .9);
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
-.resume-container, .contact-container{
-    background: rgba(0,0,0, .8);
-    color: rgb(245, 240, 230);
+#project-container .col-sm-12{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
-.contact-container input, .contact-container textarea{
+.resume-container{
+    color: rgb(82, 81, 81)
+
+
+}
+.contact-container{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;  
+}
+.contact-container textarea{
     background: rgba(255,255,255,.6);
 }
+
 .resume-download a{
     text-decoration: none;
     color: rgba(255,255,255, .8);
@@ -79,11 +106,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 /*maincontainer*/
 
-section{
-    min-height: 100vh;
-    width: 100%;
-    padding: 25px 0;
-    text-align: center;
+
+#contact-land{
+    flex-direction: column;
+    justify-content: center;
+    max-height: 35vh;
+    min-height: 35vh;
+    height: 35vh;
 }
 a:hover{
     text-decoration: none;
@@ -91,24 +120,41 @@ a:hover{
 
 /*Banner*/
 .banner{
-    height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-bottom: 2px solid black;
 }
 .quote{
-    color: #f8f8f8;
-    text-shadow: 2px 2px 8px rgba(127, 87, 46, 1);
+    color: #fac656;
+    text-shadow: 2px 2px 8px #DB8251;
     padding: 10%;
     font-size: 3em;
 }
 .quote-text{
     font-size: 1.3em;
 }
+
+/* Profile Picture */
+#profile-picture {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#profile-picture img{
+    height: 150px;
+    width: 150px;
+    margin: -75px auto auto auto;
+    border-radius: 50%;
+    border: 2px outset black;
+}
+
 /*NAV*/
 .navbar-dark{
-    background: rgb(248, 213, 58);
+    background: rgb(252, 188, 13);
 }
 
 .menu a:hover{
@@ -120,78 +166,6 @@ a:hover{
     opacity: .75;
     color: white;
 }
-/*ABOUT*/
-/* .about{
-    background-color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.resume{
-    font-size: 1.1em;
-    color: #313131;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.summary{
-    color: #302b2b;
-    align-self: flex-start;
-    width: 40%;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: #F8AA5A;
-    margin-left: 2em;
-}
-.education{
-    align-self: flex-end;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: #f8810a;
-    margin-right: 2em;
-}
-.education li{
-    list-style: none;
-    text-align: left;
-}
-.resume-download{
-    margin: 3em;
-    padding-top: 3em;
-    height: 10%;
-}
-.resume-download a{
-    color: #f3e38b;
-    padding: .3em;
-    text-decoration: none;
-    font-size: 1.5em;
-    border-radius: .3em;
-    background-color: #247ff7;
-}
-.resume-download a:hover{
-    border: 2px black outset;
-    background-color: #065bca;
-}
-
-.story{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    transition-property: display;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in;
-}
-
-.github{
-    color: white;
-    height: 75px;
-    width: auto;
-}
 .github a{
     text-decoration: none;
     color: black;
@@ -200,49 +174,20 @@ a:hover{
 .github a:hover{
     text-decoration: none;
 }
-.section-title{
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 5px rgb(119, 102, 64);
-    align-self: center;
-    width: 100%;
-}
-.profile-personal{
-    width: 30%;
-    align-self: flex-start;
-    background-color: #e4dede;
-    margin-left: 1em;
-    padding: 1em;
-}
-.profile-education{
-    width: 30%;
-    align-self: center;
-    background-color: #F8AA5A;
-    padding: 1em;    
-}
-.profile-other{
-    width: 30%;
-    align-self: flex-end;
-    background-color: #f8810a;
-    margin-right: 1em;
-    padding: 1em;    
-} */
-
-
 
 
 
 /*PROJECT*/
 
 .project-container{
-    background: url('https://images.unsplash.com/photo-1428999418909-363f8e091c50?auto=format&fit=crop&w=1353&q=80') 50% 0 repeat fixed;     
+    background: url('https://images.unsplash.com/photo-1441205188609-b875e92a9807?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=305f3e6e38b877f2f0cea9344dcf8887&auto=format&fit=crop&w=1350&q=80') 50% 0 repeat fixed;     
     background-size: 100% 1500px;
     min-height: 100vh;
-    width: 100%;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
     position: relative;
 }
@@ -261,13 +206,8 @@ a:hover{
     margin-top: 15px;
     width: 100%;
 }
-.project a{
-    text-decoration: none;
-    color: #e0dcdc;
-}
-.project a:visited{
-    color: black;
-}
+
+
 .proj{
     min-height: 50vh;
     flex-basis: 40%;
@@ -283,23 +223,8 @@ a:hover{
     width: 100%;
     transition: background-image 300ms ease-in;
 }
-/* .proj a{ */
-    /* width: 20%; */
-    
-    /* font-size: 1.2em;
-    text-decoration: none;
-    padding: .5em;
-    border-radius: .5em;
-    background-color: #f8810a; */
-/* } */
-.proj a:hover{
-    border: .1em inset black;
-    color: #252525;
-    background-color: #e4dede;
-}
-.proj p{
-    max-width: 40%;
-}
+
+
 .thumbnails{
     flex-basis: 20%;
     display: flex;
@@ -307,6 +232,7 @@ a:hover{
     justify-content: space-around;
     align-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .thumbnails div{
     height: 75px;
@@ -315,36 +241,32 @@ a:hover{
     padding: none;
 }
 .proj-thumb{
-    -webkit-box-shadow: -2px 3px 53px 1px rgba(244,61,128,1);
-    -moz-box-shadow: -2px 3px 53px 1px rgba(244,61,128,1);
-    box-shadow: -2px 3px 53px 1px rgba(244,61,128,1);
+    opacity: .5;
+    transition: opacity 150ms ease-in;
 }
 .proj-thumb:hover{
+    -webkit-box-shadow: -2px 3px 53px 1px #FBD88A;
+    -moz-box-shadow: -2px 3px 53px 1px #FBD88A;
+    box-shadow: -2px 3px 53px 1px #FBD88A;
     cursor: pointer;
+    opacity: 1;
 }
-/* .thumbnails div:nth-child(odd){
-    background-color: black;
+.proj-thumb.selected{
+    -webkit-box-shadow: -2px 3px 53px 1px #FBD88A;
+    -moz-box-shadow: -2px 3px 53px 1px #FBD88A;
+    box-shadow: -2px 3px 53px 1px #FBD88A;
+    opacity: 1;
 }
-.thumbnails div:nth-child(even){
-    background-color: red; */
-/* } */
+
 /* TECHNOLOGY SECTION */
-.tech{
-    flex-basis: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 150px;
-}
+
 
 
 .icons i, .github i {
     font-size: 3em;
     text-align: center;
     transition-property: font-size, color;
-    transition-duration: 75ms;
+    transition-duration: 150ms;
     transition-timing-function: ease-in-out;
 }
 .icon{
@@ -354,6 +276,7 @@ a:hover{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: 100px;
 }
 .icons{
     text-align: center;
@@ -362,13 +285,14 @@ a:hover{
 }
 .icons i:hover, .github i:hover{
     font-size: 4em;
-    color: #f7d7b8;
+    color: #FBCB4A;
 }
 .label{
     font-size: .8em;
     display: none;
 
 }
+
 /*CONTACT*/
 div.wpcf7{
     margin-top: 50px;
@@ -376,12 +300,10 @@ div.wpcf7{
 /*FOOTER*/
 footer{ 
     padding: 10px 10px;
-    color: #F8AA5A;
-    display: flex !important;
+    color: #FBD88A;
     justify-content: space-between;
     align-items: center;
-    background-color: #443C3A;
-    width: 100%;
+    background-color: #823F45;
 }
 footer p{
     margin: 0;
@@ -389,16 +311,16 @@ footer p{
 .social{
     display: flex;
     justify-content: flex-end;
-    color: #402C17;
+    color: #FBCB4A;
     flex-basis: 30%;
 }
 .social a{
     margin: 5px 5px;
-    color: #F8AA5A;
+    color: #FBD88A;
     text-decoration: none;
 }
 .social a:hover{
-    color: #7F572E;
+    color: #DB8251;
     text-decoration: none;
 }
 
@@ -414,30 +336,22 @@ footer p{
 /*RESPONSIVE CSS*/
 
 @media screen and (max-width: 450px){
-    
-    /* nav{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-    }
-    .menu{
-        flex-basis: 1;
-        flex-direction: column;
-        font-size: 1.5em;
-        display: none;
-        animation-duration: 300ms;
-        animation-timing-function: ease-in;
-        animation-iteration-count: 1;
-    }
-    .menu-bar{
-        visibility: visible;
-    } */
-    .quote{
-        font-size: 1.5em;
+    .thumbnails div{
+        height: 40px;
+        min-width: 55px;
+        margin: 2.5px;
+        padding: none;
     }
     section{
-        padding: 0;
+        padding: 0 5px;
+    }
+    .navbar-brand img{
+        max-height: 25px;
+        width: 50px;
+    }
+
+    .quote{
+        font-size: 1.5em;
     }
     
     .proj div{
@@ -446,11 +360,7 @@ footer p{
     .proj p{
         font-size: .8em;
     }
-    .tech{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
+
     .icon{
         padding: 1em;
         font-size: .7em;
@@ -464,6 +374,7 @@ footer p{
     
     .resume-download{
         font-size: .8em;
+        margin-bottom: 10px;
     }
 }
 @media screen and (max-width: 900px){
@@ -479,11 +390,7 @@ footer p{
 @media screen and (max-width: 1366px){
     
 }
-@media screen and (max-height: 900px){
-    section{
-        height: auto;
-    }
-}
+
 
 /*ANIMATION KEYFRAMES*/
 @keyframes height{

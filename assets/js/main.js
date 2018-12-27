@@ -1,4 +1,4 @@
-;(function () {
+; (function () {
 
     const icons = document.querySelectorAll('.icons');
     const github = document.querySelector('.github');
@@ -14,34 +14,26 @@
     const thumbnailContainer = $('.thumbnails');
     const bigProjDesc = $('.proj p');
     const bigProjImage = $('.proj div');
-    const bigProLink = $('.proj a');
-  
+    const bigProLink = $('.proj #live-link');
+    const githubLink = $('.proj #github-link')
+
     createProjListener();
 
-        function createProjListener() {
+    function createProjListener() {
         const projThumbs = document.querySelectorAll('.proj-thumb');
-        projThumbs.forEach(thumb => {
+        projThumbs.forEach((thumb, i) => {
+            if(i === 0){
+                updateProjects(thumb);
+                $(thumb).addClass('selected').css({ border: "2px solid black" });
+            }
             thumb.addEventListener('click', function () {
-                for (let i = 0; i < projThumbs.length; i++) {
-                    projThumbs[i].style.border = "none"
-                }
-                this.style.border = "2px solid black";
-                bigProjImage.css({
-                    'background': this.style.background, "background-position": "center",
-                    "background-size": "contain", "background-repeat": "no-repeat"
-                })
-                bigProLink.text(this.attributes.name.nodeValue);
-                bigProLink.attr("href", this.attributes.link.nodeValue);
-                bigProjDesc.html(this.attributes.desc.nodeValue);
-                techs = this.attributes.technologies.nodeValue.split(', ');
-                icons.forEach(icon => {
-                    icon.style.display = "none";
-                    techs.forEach(tech => {
-                        if (icon.firstChild.className === tech) {
-                            icon.style.display = "block";
-                        }
-                    })
-                })
+                $('.proj-thumb').removeClass('selected').css({ border: "none" });
+                $(this).addClass('selected').css({ border: "2px solid black" });
+                // for (let i = 0; i < projThumbs.length; i++) {
+                //     projThumbs[i].style.border = "none"
+                // }
+                // this.style.border = "2px solid black";
+                updateProjects(this);
             })
         })
     }
@@ -49,11 +41,11 @@
     createProjListener();
 
 
-    
 
 
 
-    
+
+
     icons.forEach(function (icon) {
         icon.addEventListener('mouseenter', function () {
             this.children[1].style.display = "block"
@@ -62,7 +54,7 @@
             this.children[1].style.display = "none"
         });
     });
-    if(github){
+    if (github) {
         github.addEventListener('mouseenter', function () {
             this.lastChild.style.display = "block"
         });
@@ -70,7 +62,7 @@
             this.lastChild.style.display = "none"
         });
     };
-    
+
 
 
     function linkListener() {
@@ -93,30 +85,50 @@
         this.classList.add('active');
     }
     navLinks.forEach(li => {
-        li.addEventListener('click', function(){
+        li.addEventListener('click', function () {
             scrollTo(li);
             // console.log(li.dataset);
         })
     })
 
+    function updateProjects(node){
+        bigProjImage.css({
+            'background': node.style.background, "background-position": "center",
+            "background-size": "contain", "background-repeat": "no-repeat"
+        })
+        bigProLink.text(node.attributes.name.nodeValue);
+        bigProLink.attr("href", node.attributes.link.nodeValue);
+        githubLink.attr("href", node.attributes.github.nodeValue);
+        githubLink.text(node.attributes.name.nodeValue + " Github");
+        bigProjDesc.html(node.attributes.desc.nodeValue);
+        techs = node.attributes.technologies.nodeValue.split(', ');
+        icons.forEach(icon => {
+            icon.style.display = "none";
+            techs.forEach(tech => {
+                if (icon.firstChild.className === tech) {
+                    icon.style.display = "block";
+                }
+            })
+        })
+    }
 
-//SCROLLER
+    //SCROLLER
 
-    
-    $(document).ready(function(){
-        $('section[data-type="background"]').each(function(){
+
+    $(document).ready(function () {
+        $('section[data-type="background"]').each(function () {
             var $bgobj = $(this); // assigning the object
-        
-            $(window).scroll(function() {
-                var yPos = -($(window).scrollTop() / $bgobj.data('speed')); 
-                
+
+            $(window).scroll(function () {
+                var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+
                 // Put together our final background position
-                var coords = '50% '+ yPos + 'px';
-    
+                var coords = '50% ' + yPos + 'px';
+
                 // Move the background
                 $bgobj.css({ backgroundPosition: coords });
-            }); 
-        });    
+            });
+        });
     });
 
 })();

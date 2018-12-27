@@ -8,19 +8,19 @@
  */
 $landing_image = get_field('landing_image');
 ?>
-<section class="banner" style="background: url('<?php echo $landing_image['url'];?>') no-repeat; background-size: cover;">
+<section id="contact-land" class="contact-banner row" style="background: url('<?php echo $landing_image['url'];?>') no-repeat; background-size: cover;">
 <div class="quote">
         <h3 class="quote-text">
         Contact
         </h3>
     </div>
 </section>
-<section id="post-<?php the_ID(); ?>" class="contact-container">
+<section id="post-<?php the_ID(); ?>" class="contact-container row" >
 	
 
 	<?php portfolio_post_thumbnail(); ?>
 
-	<div class="entry-content contact">
+	<div class="entry-content contact col-12">
 		<?php
 			the_content();
 

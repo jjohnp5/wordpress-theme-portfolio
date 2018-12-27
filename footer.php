@@ -14,7 +14,7 @@
 <?php  wp_footer();?>
   
     <!-- FOOTER -->
-    <footer>
+    <footer class="row">
     <div><p>Website Built by: <?php the_author(); ?></p></div>
     <div class="social">
         <a href="https://www.facebook.com/john.lagmay"><i class="fa fa-facebook-square fa-3x"
